@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "box1 box2"
+    "box3 .";
+  margin-bottom: 240px;
+}
+.box1 {
+  background-color: khaki;
+  grid-area: box1;
+
+}
+.box2 {
+  background-color: rgb(147, 140, 240);
+  grid-area: box2;
+}
+.box3 {
+  background-color: rgb(140, 240, 178);
+  grid-area: box3;
+}

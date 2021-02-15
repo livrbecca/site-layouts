@@ -1,0 +1,57 @@
+<!-- using grid lines here: 1/3 etc -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid 2</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-gap: 1em;
+        justify-items: stretch;
+        align-items: stretch;
+      }
+      .wrapper > div {
+        background: rgb(243, 169, 206);
+        padding: 1em;
+      }
+      .wrapper > div:nth-child(even) {
+        background: rgb(233, 151, 45);
+      }
+
+      .box1 {
+        /* align-self: flex-start; */
+        /* align means: top or bottom */
+        grid-column: 1/3;
+        grid-row: 1/3;
+      }
+      .box2 {
+        /* align-self: flex-end; */
+        grid-column: 3;
+        grid-row: 1/3;
+      }
+      .box3 {
+        /* justify-self: end; */
+        /* justify means: left or right side */
+        grid-column: 2/4;
+        grid-row: 3;
+      }
+      .box4 {
+        border: black 4px dotted;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box box1">Box One</div>
+      <div class="box box2">Box Two</div>
+      <div class="box box3">Box Three</div>
+      <div class="box box4">Box Four</div>
+    </div>
+  </body>
+</html>

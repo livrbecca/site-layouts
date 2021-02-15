@@ -1,0 +1,56 @@
+body {
+  font-weight: 300;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: grid;
+  grid-template-columns: [page-start] 1fr [content-start] 80vw [content-end] 1fr [page-end];
+  grid-template-rows: [hero-start] 60vh [info-start] 5em [hero-end] 5em [info-end] auto [page-bottom];
+}
+
+.title {
+  color: rgba(255, 255, 255, 0.842);
+  font-size: 3.5rem;
+}
+.title span {
+  font-weight: 300;
+  display: block;
+}
+.small-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.section-one {
+  background: url(https://64.media.tumblr.com/50c592a8c3b4592b6dcd9b0f59d9cf19/0120f9d466c67b2b-b3/s2048x3072/1879e9d5349aed6ff73beca175824c3261371b7d.png);
+  background-color: #f7aa9b;
+  background-blend-mode: multiply;
+  background-size: cover;
+  text-align: end;
+  grid-column: page-start / page-end;
+  grid-row: hero-start / hero-end;
+}
+.section-two {
+  background: #ddd;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  grid-column: content-start / content-end;
+  grid-row: info-start / info-end;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
+.section-three {
+  background: #f5a595;
+  grid-column: page-start / page-end;
+  grid-row: hero-end / page-bottom;
+  padding: 150px 0;
+  /* creating own version of sub-grid with .container
+  must use 'inherit' to be able to use line names */
+  display: grid;
+  grid-template-columns: inherit;
+}
+.container {
+  background: #44362c;
+  grid-column: content-start / content-end;
+  color: white;
+  padding: 10px;
+}

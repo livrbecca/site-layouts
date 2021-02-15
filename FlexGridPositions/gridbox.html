@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grids</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        /* grid-column-gap: 1em;
+        grid-row-gap: 2em; */
+        grid-gap: 1.5em;
+      }
+      .wrapper > div {
+        background: hotpink;
+        padding: 1em;
+      }
+      .wrapper > div:nth-child(even) {
+        background: burlywood;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque quo
+        eveniet eos qui consequuntur similique cum dolor enim eum
+        necessitatibus, ullam quam aliquam nostrum cupiditate dignissimos,
+        officiis placeat, obcaecati ipsum quod. Dolore doloribus consequatur
+        esse iure incidunt iste dicta saepe ipsum laborum omnis voluptas aliquam
+        quia, minus asperiores provident eum, ab praesentium similique
+        recusandae! Facere error fugiat accusamus non architecto voluptas iusto
+        possimus aliquam tempore odio quisquam consequuntur nihil odit, sunt
+        sint ea vel, dolore optio aspernatur vero fugit voluptate!
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+        magnam. Architecto suscipit, sapiente ut optio a reprehenderit
+        consectetur nesciunt assumenda, cumque omnis itaque dolore ullam nostrum
+        perspiciatis! Architecto, molestias expedita!
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptate
+          molestias ad delectus soluta ut error possimus laborum ducimus qui.
+        </p>
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea voluptate
+          molestias ad delectus soluta ut error possimus laborum ducimus qui.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
